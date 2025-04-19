@@ -1,0 +1,44 @@
+// Define an interface
+interface Animal {
+    void sound();         // abstract method
+    void eat();           // abstract method
+}
+
+// Implementing the interface in a class
+class Dog implements Animal {
+    public void sound() {
+        System.out.println("Dog barks");
+    }
+
+    public void eat() {
+        System.out.println("Dog eats bones");
+    }
+}
+
+// Another class implementing the same interface
+class Cat implements Animal {
+    public void sound() {
+        System.out.println("Cat meows");
+    }
+
+    public void eat() {
+        System.out.println("Cat eats fish");
+    }
+}
+
+// Main class
+public class Main {
+    public static void main(String[] args) {
+        // Polymorphism: Interface reference, object of Dog
+        Animal a1 = new Dog();
+        a1.sound();
+        a1.eat();
+
+        System.out.println();
+
+        // Interface reference, object of Cat
+        Animal a2 = new Cat();
+        a2.sound();
+        a2.eat();
+    }
+}
